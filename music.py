@@ -4,10 +4,10 @@ import youtube_dl
 from discord.ext import commands
 import requests as rq
 from discord import opus
-
+import os
 
 bot = commands.Bot(command_prefix='.')
-YOUTUBE_API = 'YOUR YOUTUBE API TOKEN HERE'
+YOUTUBE_API = 'AIzaSyDPEbluGUTwDPB0odym_Jr9hN1RS6ImNo4'
 
 
 bot.remove_command('help')
@@ -306,4 +306,4 @@ async def songs(msg):
             await bot.say("Currently no songs in queue")
 
 
-bot.run('YUR BOT TOKEN HERE')
+bot.run(os.getenv('Token'))
